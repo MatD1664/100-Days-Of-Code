@@ -1,0 +1,32 @@
+#List comprehension
+#Create a list of numbers
+
+numbers = [1,2,3]
+
+# new_list = [new_item for item in old_list]
+
+new_numbers = [n+1 for n in numbers]
+print(new_numbers)
+
+#Can also use list comprehension for other sequences eg strings
+
+name = "Mathew"
+new_list = [letter for letter in name]
+print(new_list)
+
+#use range and list comprehension
+#new_list = [new_num for num in range()]
+doubles = [2*n for n in range(1,5)]
+print(doubles)
+
+#Conditional list comprehension
+#new_list = [new_item for item in list if test]
+
+#eg only return short names from a list of names
+names = ["Oogie-Boogie","Jack", "Sally","Pumpkin King", "Professor", "Mayor of Halloweentown"]
+short_names = [name for name in names if len(name) < 6]
+print(short_names)
+
+#change the long names to upper case
+long_names = [name.upper() for name in names if len(name)>5]
+print(long_names)
