@@ -43,12 +43,11 @@ def is_resource_sufficient(order_ingredients):
 def process_coins():
     """Returns the total calculated from coins inserted"""
     print("Please insert coins")
-    total =  int(input("How many quarters?: ")) *0.25
+    total = int(input("How many quarters?: ")) *0.25
     total += int(input("How many dimes?: ")) * 0.1
     total += int(input("How many nickles?: ")) * 0.05
     total += int(input("How many pennies?: ")) * 0.01
     return total
-
 
 
 def is_transaction_successful(money_received, drink_cost):
@@ -67,14 +66,13 @@ def is_transaction_successful(money_received, drink_cost):
 def make_coffee(drink_name, order_ingredients):
     """Deduct the required ingredients from the resources"""
     for item in order_ingredients:
-        resources[item]-=order_ingredients[item]
+        resources[item] -= order_ingredients[item]
     print(f"Here is your {drink_name} ☕️")
 
 
 # TODO: 3. Print report of all coffee machine resources
 
 profit = 0
-
 
 # TODO: 2. Turn off the Coffee Machine by entering "off" to the prompt
 
@@ -97,9 +95,8 @@ while is_on:
                 make_coffee(choice, drink['ingredients'])
 
 
-
 # TODO: 4. Check resources sufficient to make drink order
-#if choice ==
+# if choice ==
 
 
 
@@ -110,8 +107,6 @@ while is_on:
 
 #TODO: 6. Check transaction successful
 def transaction(choice, quarters, dimes, nickles, pennies):
-
-
     amount = (quarters * 0.25) + (dimes * 0.1) + (nickles * 0.05) + (pennies * 0.01)
 
 # TODO 7. Make coffee
